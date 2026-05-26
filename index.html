@@ -28,8 +28,15 @@
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 
       background:
         radial-gradient(circle at 50% -10%, rgba(139, 92, 246, 0.22), transparent 34%),
@@ -37,13 +44,17 @@
         var(--bg);
 
       color: var(--text);
+
       min-height: 100vh;
+
       overflow-x: hidden;
     }
 
     body::before {
       content: "";
+
       position: fixed;
+
       inset: 0;
 
       background-image:
@@ -53,20 +64,26 @@
       background-size: 48px 48px;
 
       mask-image: linear-gradient(to bottom, black, transparent 78%);
+
       pointer-events: none;
     }
 
     .page {
       max-width: 1120px;
+
       margin: 0 auto;
+
       padding: 34px 24px 60px;
+
       position: relative;
     }
 
     .glow {
       position: absolute;
+
       width: 420px;
       height: 420px;
+
       border-radius: 999px;
 
       background: rgba(139, 92, 246, 0.18);
@@ -83,39 +100,78 @@
 
     nav {
       display: flex;
+
       align-items: center;
       justify-content: space-between;
 
       padding: 14px 0;
+
       margin-bottom: 88px;
     }
 
     .brand {
       font-size: 14px;
+
       font-weight: 700;
+
       letter-spacing: 0.02em;
+    }
+
+    .nav-right {
+      display: flex;
+
+      align-items: center;
+
+      gap: 24px;
     }
 
     .nav-links {
       display: flex;
+
       gap: 22px;
+
       align-items: center;
     }
 
-    .nav-links a {
+    .nav-links a,
+    .lang-switch button {
       color: var(--muted);
+
       text-decoration: none;
+
       font-size: 14px;
+
+      background: transparent;
+
+      border: none;
+
+      cursor: pointer;
+
       transition: color 0.2s ease;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .lang-switch button:hover {
       color: var(--text);
+    }
+
+    .lang-switch {
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      border-left: 1px solid var(--border);
+
+      padding-left: 18px;
     }
 
     .hero {
       text-align: center;
+
       max-width: 940px;
+
       margin: 0 auto 76px;
 
       animation: rise 0.8s ease both;
@@ -123,17 +179,21 @@
 
     .badge {
       display: inline-flex;
+
       align-items: center;
+
       gap: 8px;
 
       padding: 8px 13px;
 
       border: 1px solid var(--border);
+
       border-radius: 999px;
 
       background: rgba(255, 255, 255, 0.05);
 
       color: #d4d4d8;
+
       font-size: 14px;
 
       margin-bottom: 24px;
@@ -144,6 +204,7 @@
     .pulse {
       width: 8px;
       height: 8px;
+
       border-radius: 999px;
 
       background: #22c55e;
@@ -157,9 +218,11 @@
       font-size: clamp(46px, 8vw, 88px);
 
       line-height: 0.95;
+
       letter-spacing: -0.07em;
 
       background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+
       -webkit-background-clip: text;
 
       color: transparent;
@@ -173,6 +236,7 @@
       color: var(--muted);
 
       font-size: 19px;
+
       line-height: 1.75;
     }
 
@@ -180,13 +244,17 @@
       margin-top: 34px;
 
       display: flex;
+
       justify-content: center;
+
       gap: 14px;
+
       flex-wrap: wrap;
     }
 
     .button {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
 
@@ -195,9 +263,11 @@
       border-radius: 999px;
 
       color: var(--text);
+
       text-decoration: none;
 
       font-weight: 650;
+
       font-size: 14px;
 
       border: 1px solid var(--border);
@@ -220,12 +290,15 @@
 
     .button.primary {
       background: #f4f4f5;
+
       color: #09090b;
+
       border-color: #f4f4f5;
     }
 
     .panel {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
 
       gap: 18px;
@@ -276,6 +349,7 @@
       color: var(--muted);
 
       line-height: 1.7;
+
       font-size: 15px;
     }
 
@@ -289,6 +363,7 @@
       color: #d4d4d8;
 
       font-size: 13px;
+
       line-height: 1.9;
 
       white-space: pre-wrap;
@@ -304,6 +379,7 @@
       font-size: 13px;
 
       text-transform: uppercase;
+
       letter-spacing: 0.18em;
 
       margin-bottom: 16px;
@@ -311,7 +387,9 @@
 
     .stack {
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 10px;
     }
 
@@ -325,6 +403,7 @@
       background: rgba(255, 255, 255, 0.045);
 
       color: #d4d4d8;
+
       font-size: 14px;
 
       transition:
@@ -340,16 +419,21 @@
 
     footer {
       display: flex;
+
       justify-content: space-between;
+
       gap: 16px;
+
       flex-wrap: wrap;
 
       padding-top: 28px;
+
       margin-top: 56px;
 
       border-top: 1px solid var(--border);
 
       color: var(--soft);
+
       font-size: 14px;
     }
 
@@ -380,16 +464,16 @@
         margin-bottom: 64px;
       }
 
-      .nav-links {
-        gap: 14px;
-      }
-
       .panel {
         grid-template-columns: 1fr;
       }
 
       .subtitle {
         font-size: 17px;
+      }
+
+      .nav-right {
+        gap: 14px;
       }
     }
   </style>
@@ -400,33 +484,82 @@
     <div class="glow"></div>
 
     <nav>
-      <div class="brand">Yawen Chen</div>
+      <div
+        class="brand"
+      
+        data-en="Yawen Chen"
+        data-zhcn="陈亚文"
+        data-zhtw="陳亞文"
+      >
+        Yawen Chen
+      </div>
 
-      <div class="nav-links">
-        <a href="#focus">Focus</a>
-        <a href="#stack">Stack</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a
+            href="#focus"
+            data-en="Focus"
+            data-zhcn="方向"
+            data-zhtw="方向"
+          >
+            Focus
+          </a>
 
-        <a
-          href="https://www.linkedin.com/in/yawen--chen/"
-          target="_blank"
-        >
-          LinkedIn
-        </a>
+          <a
+            href="#stack"
+            data-en="Stack"
+            data-zhcn="技术栈"
+            data-zhtw="技術棧"
+          >
+            Stack
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/yawen--chen/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="lang-switch">
+          <button onclick="setLanguage('en')">EN</button>
+          <button onclick="setLanguage('zhcn')">简中</button>
+          <button onclick="setLanguage('zhtw')">繁中</button>
+        </div>
       </div>
     </nav>
 
     <section class="hero">
       <div class="badge">
         <span class="pulse"></span>
-        Portfolio in progress
+
+        <span
+          data-en="Portfolio in progress"
+          data-zhcn="个人网站建设中"
+          data-zhtw="個人網站建設中"
+        >
+          Portfolio in progress
+        </span>
       </div>
 
-      <h1>
-        Building software, systems, and infrastructure
-        for scalable engineering workflows.
+      <h1
+        data-en="Building software, systems, and infrastructure for scalable engineering workflows."
+        data-zhcn="构建可扩展的软件系统、工程平台与自动化工作流。"
+        data-zhtw="建構可擴展的軟體系統、工程平台與自動化工作流程。"
+      >
+        Building software, systems, and infrastructure for scalable engineering workflows.
       </h1>
 
-      <p class="subtitle">
+      <p
+        class="subtitle"
+
+        data-en="I am Yawen Chen, a Software Engineer interested in backend development, distributed systems, automation workflows, and modern engineering platforms."
+
+        data-zhcn="我是陈亚文，一名专注于后端开发、分布式系统、自动化工作流与现代工程平台的软件工程师。"
+
+        data-zhtw="我是陳亞文，一名專注於後端開發、分散式系統、自動化工作流程與現代工程平台的軟體工程師。"
+      >
         I am Yawen Chen, a Software Engineer interested in backend development,
         distributed systems, automation workflows, and modern engineering platforms.
       </p>
@@ -436,6 +569,10 @@
           class="button primary"
           href="https://vhu6xep5.forms.app/lets-connect"
           target="_blank"
+
+          data-en="Contact me"
+          data-zhcn="联系我"
+          data-zhtw="聯絡我"
         >
           Contact me
         </a>
@@ -444,6 +581,10 @@
           class="button"
           href="https://www.linkedin.com/in/yawen--chen/"
           target="_blank"
+
+          data-en="View LinkedIn"
+          data-zhcn="查看 LinkedIn"
+          data-zhtw="查看 LinkedIn"
         >
           View LinkedIn
         </a>
@@ -451,32 +592,108 @@
     </section>
 
     <section id="focus" class="panel">
-      <div class="card terminal"><span>$ whoami</span>
+      <div
+        class="card terminal"
+
+        data-en='$ whoami
 Yawen Chen
 
-<span>$ current_focus</span>
+$ current_focus
 Software Engineering
 Backend Development
 Distributed Systems
 Infrastructure Automation
 
-<span>$ interests</span>
+$ interests
 Reliable Systems
 Developer Infrastructure
 Automation Workflows
 Platform Engineering
 
-<span>$ status</span>
-Portfolio under construction</div>
+$ status
+Portfolio under construction'
+
+        data-zhcn='$ whoami
+陈亚文
+
+$ current_focus
+软件工程
+后端开发
+分布式系统
+基础设施自动化
+
+$ interests
+可靠系统
+开发者基础设施
+自动化工作流
+平台工程
+
+$ status
+个人网站建设中'
+
+        data-zhtw='$ whoami
+陳亞文
+
+$ current_focus
+軟體工程
+後端開發
+分散式系統
+基礎設施自動化
+
+$ interests
+可靠系統
+開發者基礎設施
+自動化工作流程
+平台工程
+
+$ status
+個人網站建設中'
+      >
+$ whoami
+Yawen Chen
+
+$ current_focus
+Software Engineering
+Backend Development
+Distributed Systems
+Infrastructure Automation
+
+$ interests
+Reliable Systems
+Developer Infrastructure
+Automation Workflows
+Platform Engineering
+
+$ status
+Portfolio under construction
+      </div>
 
       <div class="card">
-        <div class="section-label">Current direction</div>
+        <div
+          class="section-label"
 
-        <h2>
+          data-en="Current direction"
+          data-zhcn="当前方向"
+          data-zhtw="目前方向"
+        >
+          Current direction
+        </div>
+
+        <h2
+          data-en="Software engineering with systems and automation depth"
+          data-zhcn="偏系统与自动化方向的软件工程"
+          data-zhtw="偏系統與自動化方向的軟體工程"
+        >
           Software engineering with systems and automation depth
         </h2>
 
-        <p>
+        <p
+          data-en="I am building this portfolio to showcase my technical work across software development, backend services, infrastructure automation, and engineering workflows."
+
+          data-zhcn="我正在构建这个个人网站，用于展示我在软件开发、后端服务、基础设施自动化与工程工作流方面的技术经验。"
+
+          data-zhtw="我正在建立這個個人網站，用於展示我在軟體開發、後端服務、基礎設施自動化與工程工作流程方面的技術經驗。"
+        >
           I am building this portfolio to showcase my technical work across
           software development, backend services, infrastructure automation,
           and engineering workflows.
@@ -485,7 +702,15 @@ Portfolio under construction</div>
     </section>
 
     <section id="stack" class="card">
-      <div class="section-label">Technical stack</div>
+      <div
+        class="section-label"
+
+        data-en="Technical stack"
+        data-zhcn="技术栈"
+        data-zhtw="技術棧"
+      >
+        Technical stack
+      </div>
 
       <div class="stack">
         <span class="tag">Python</span>
@@ -505,8 +730,29 @@ Portfolio under construction</div>
 
     <footer>
       <span>© 2026 Yawen Chen</span>
-      <span>Built and maintained by Yawen</span>
+
+      <span
+        data-en="Built and maintained by Yawen"
+        data-zhcn="由亚文构建与维护"
+        data-zhtw="由亞文建立與維護"
+      >
+        Built and maintained by Yawen
+      </span>
     </footer>
   </main>
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-en]").forEach((el) => {
+        if (lang === "zhcn") {
+          el.innerText = el.dataset.zhcn;
+        } else if (lang === "zhtw") {
+          el.innerText = el.dataset.zhtw;
+        } else {
+          el.innerText = el.dataset.en;
+        }
+      });
+    }
+  </script>
 </body>
 </html>
